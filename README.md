@@ -229,8 +229,8 @@ Mahmoud Khamees
 
 Aspiring Data Analyst | SQL Server | Power BI | Data Analytics
 
-* LinkedIn: [Add your LinkedIn profile]
-* GitHub: [Add your GitHub profile]
+* LinkedIn: [https://www.linkedin.com/in/mahmoud-khamees-6a3776362?utm_source=share_via&utm_content=profile&utm_medium=member_ios]
+* GitHub: [https://github.com/mahmoudkhamees-del]
 
 ⸻
 
