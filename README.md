@@ -1,40 +1,109 @@
-💊 Pharmaceutical Sales & Supply Chain Analytics
+Pharmaceutical Sales & Supply Chain Analytics
 
-📌 Project Overview
+An end-to-end data analytics portfolio project exploring pharmaceutical sales performance, product and customer insights, inventory levels, and supply chain operations using SQL Server and Microsoft Power BI.
 
-This project focuses on analyzing pharmaceutical sales, inventory performance, and supply chain operations using SQL Server and Microsoft Power BI.
+The project transforms two separate datasets into interactive dashboards designed to support business performance monitoring, inventory analysis, and data-driven decision-making.
 
-The goal is to transform raw data into meaningful business insights that help stakeholders understand sales performance, evaluate product demand, monitor inventory levels, and explore supplier and warehouse performance.
+Project Overview
 
-The project combines sales analysis with inventory and supply chain analytics through interactive dashboards designed to support data-driven decision-making.
+Pharmaceutical sales and inventory management involve different analytical challenges. Sales analysis helps identify revenue contributors, customer purchasing patterns, and product performance, while inventory and supply chain analysis helps monitor stock levels, warehouse distribution, forecast demand, and supplier lead times.
 
-🎯 Business Objectives
+This project addresses these analytical needs through two distinct datasets:
 
-* Analyze sales performance across products, product classes, customers, countries, and sales channels.
+* Pharmaceutical Sales Dataset: Used to analyze sales performance, customers, products, sales channels, and geographic distribution.
+* Supply Chain & Inventory Dataset: Used to analyze inventory value, inventory levels, reorder points, forecast demand, warehouses, and supplier lead times.
+
+The datasets are analyzed as separate analytical domains. They are not assumed to represent the same company, and their measures are not treated as directly comparable unless a valid business and data relationship has been established.
+
+The final Power BI report contains four interactive pages, each designed to answer a different set of business questions.
+
+Project Objectives
+
+The project aims to:
+
+* Analyze sales performance over time.
 * Identify top-selling products and high-contributing customers.
-* Track sales trends over time and compare product performance.
-* Monitor inventory value and inventory levels across warehouses.
-* Evaluate inventory levels against forecast demand.
-* Analyze supplier performance and average lead times.
-* Build interactive dashboards that make business insights easier to explore.
+* Compare sales performance across product classes, countries, and sales channels.
+* Examine product-level sales and quantity patterns.
+* Monitor inventory value and stock levels.
+* Compare inventory levels with forecast demand.
+* Analyze inventory distribution across warehouses.
+* Compare suppliers using available lead-time information.
+* Build interactive dashboards that communicate business performance clearly.
+* Apply SQL-based analysis and data validation before developing Power BI reports.
 
-🛠️ Tools & Technologies
+Tools & Technologies
 
-* SQL Server: Data exploration, data validation, and analytical queries.
-* Microsoft Power BI: Interactive dashboard development and data visualization.
-* Power Query: Data preparation and transformation.
-* DAX: Measures and business KPIs.
-* Data Modeling: Relationships between tables to support analytical reporting.
+Tool	Purpose
+SQL Server	Data exploration, validation, and analytical queries
+SQL	Aggregation, filtering, joins, and business analysis
+Microsoft Power BI	Interactive dashboards and business reporting
+Power Query	Data preparation and transformation
+DAX	Measures, KPIs, and analytical calculations
+Data Modeling	Table relationships and analytical model design
+GitHub	Project documentation and portfolio presentation
 
-📊 Dashboard Structure
+Data Sources & Scope
 
-The Power BI report consists of four pages, each designed to answer a different set of business questions.
+The project uses two separate datasets.
 
-1. Executive Overview
+1. Pharmaceutical Sales Dataset
 
-Provides a high-level summary of overall business performance.
+This dataset supports analysis of:
 
-Key metrics and visuals:
+* Sales performance
+* Product classes and individual products
+* Customer contribution
+* Sales channels
+* Country-level sales distribution
+* Sales trends over time
+* Sales quantity and average selling price
+
+2. Supply Chain & Inventory Dataset
+
+This dataset supports analysis of:
+
+* Inventory value
+* Inventory levels
+* Reorder points
+* Forecast demand
+* Warehouse distribution
+* Supplier lead times
+* Inventory trends
+* Inventory and forecast-demand comparisons
+
+Important Data Scope Consideration
+
+The two datasets are treated as separate analytical domains because they do not represent a confirmed, unified company dataset.
+
+Consequently, sales and inventory measures should be interpreted within their respective data contexts. A combined business conclusion requires appropriate relationships, compatible definitions, and consistent aggregation logic.
+
+The analysis is limited to the fields and records available in the source datasets.
+
+Analytical Workflow
+
+The project follows a structured data analytics workflow:
+
+1. Data Import: Loaded the source tables into SQL Server.
+2. Data Profiling: Examined table structures, columns, data types, and available values.
+3. Data Quality Checks: Investigated data issues and validated relevant fields.
+4. SQL Analysis: Used SQL queries to explore the datasets and answer business questions.
+5. Data Preparation: Prepared the data for reporting and visualization.
+6. Data Modeling: Configured relationships between relevant tables in Power BI.
+7. DAX Development: Created measures for business KPIs and analytical calculations.
+8. Dashboard Development: Built four interactive report pages.
+9. Visual Analysis: Organized charts, matrices, KPI cards, and filters around business questions.
+10. Documentation: Prepared project documentation to explain the analytical approach, dashboard structure, and limitations.
+
+Power BI Dashboard
+
+The report contains four pages.
+
+Page 1 — Executive Overview
+
+Purpose: Provide a high-level overview of sales performance and selected supply chain indicators.
+
+Key metrics and visuals include:
 
 * Total Sales
 * Total Customers
@@ -50,23 +119,24 @@ Key metrics and visuals:
 
 Business questions:
 
-* How are sales performing over time?
+* How does sales performance change over time?
 * Which product classes contribute most to sales?
 * How are sales distributed across channels?
-* Which customers contribute most to total sales?
+* Which customers contribute most to sales?
+* What are the headline inventory and lead-time indicators?
 
-2. Sales Analysis
+Page 2 — Sales Analysis
 
-Focuses on detailed sales performance and customer contribution.
+Purpose: Examine sales performance, product contribution, customer contribution, and sales trends in greater detail.
 
-Key metrics and visuals:
+Key metrics and visuals include:
 
 * Total Sales
 * Total Customers
 * Total Products
 * Total Quantity Sold
 * Average Selling Price
-* Sales YTD
+* Sales Year-to-Date (YTD)
 * Monthly Sales Trend
 * Top Customers
 * Sales by Product Class
@@ -76,15 +146,16 @@ Key metrics and visuals:
 Business questions:
 
 * Which products generate the highest sales?
-* Who are the top-contributing customers?
+* Which customers contribute most to total sales?
 * How does sales performance change over time?
-* How do product classes and sales teams compare?
+* How do product classes compare?
+* How is sales distributed across the available sales-team categories?
 
-3. Inventory Analysis
+Page 3 — Inventory Analysis
 
-Examines inventory levels, inventory value, demand, and supply chain performance.
+Purpose: Explore inventory levels, inventory value, warehouse distribution, forecast demand, and supplier lead times.
 
-Key metrics and visuals:
+Key metrics and visuals include:
 
 * Inventory Value
 * Average Inventory Level
@@ -95,22 +166,22 @@ Key metrics and visuals:
 * Inventory Value Trend
 * Highest-Inventory SKUs
 * Inventory by Warehouse
-* Supplier Performance
+* Supplier Performance by Lead Time
 * Demand vs. Inventory
 
 Business questions:
 
 * How does inventory value change over time?
-* Which products hold the highest inventory levels?
+* Which SKUs have the highest inventory levels or values?
 * How is inventory distributed across warehouses?
-* How does forecast demand compare with inventory levels?
-* How do suppliers compare in terms of lead time?
+* How does forecast demand compare with available inventory?
+* Which suppliers have shorter or longer average lead times?
 
-4. Product & Customer Insights
+Page 4 — Product & Customer Insights
 
-Provides a more detailed view of product performance and customer contribution.
+Purpose: Provide a more detailed view of product performance, customer contribution, and geographic sales distribution.
 
-Key metrics and visuals:
+Key metrics and visuals include:
 
 * Total Products
 * Total Customers
@@ -129,45 +200,34 @@ Business questions:
 
 * Which products and product classes contribute most to sales?
 * Which customers generate the highest sales?
-* How is sales performance distributed across countries?
+* How is sales distributed across countries?
 * How do products compare in sales, quantity, and inventory value?
 
-📈 Key Performance Indicators (KPIs)
+Key Performance Indicators
 
-The report includes business metrics covering sales, customers, products, and inventory.
+The report includes measures covering sales, customers, products, and inventory.
 
-KPI	Purpose
-Total Sales	Measures overall sales performance.
-Total Quantity Sold	Tracks the quantity of products sold.
-Total Customers	Measures the number of customers represented in the data.
-Total Products	Measures the number of products represented in the data.
-Average Selling Price	Evaluates the average selling price based on the underlying calculation.
-Sales YTD	Tracks year-to-date sales performance.
-Inventory Value	Measures the monetary value of inventory.
-Average Inventory Level	Summarizes inventory levels.
-Average Reorder Point	Summarizes the reorder-point values in the dataset.
-Average Lead Time	Measures the average supplier lead time.
-Forecast Demand	Summarizes forecast demand.
+KPI	Analytical Purpose
+Total Sales	Measures sales value within the applicable filter context
+Total Quantity Sold	Measures the quantity sold
+Total Customers	Counts customers according to the implemented measure
+Total Products	Counts products according to the implemented measure
+Average Selling Price	Evaluates average selling price using the underlying calculation
+Sales YTD	Measures year-to-date sales where supported by the date model
+Inventory Value	Measures the monetary value of inventory
+Average Inventory Level	Summarizes inventory levels using the implemented calculation
+Average Reorder Point	Summarizes reorder-point values
+Average Lead Time	Measures the average supplier lead time
+Forecast Demand	Summarizes forecast demand
+Total Warehouses	Counts warehouses represented in the inventory dataset
 
-Note: KPI definitions and aggregation methods depend on the underlying data structure and DAX measure definitions.
+Note: The exact definitions of these KPIs depend on the implemented DAX measures, source fields, and filter context. Counts, averages, and totals should be validated against the underlying data before being interpreted as business results.
 
-🔍 Data Analysis Workflow
+Interactive Features
 
-The project follows a structured analytical workflow:
+The report uses interactive slicers to help users explore the available data.
 
-1. Data Import: Loaded the source tables into SQL Server.
-2. Data Profiling: Explored the structure, fields, and characteristics of the available data.
-3. Data Quality Checks: Investigated data quality and validated relevant fields.
-4. SQL Analysis: Used SQL queries to explore the data and investigate business questions.
-5. Data Preparation: Prepared and transformed data for reporting.
-6. Data Modeling: Configured table relationships to support analysis in Power BI.
-7. DAX Measures: Developed measures to calculate business KPIs.
-8. Dashboard Development: Designed interactive report pages with charts, tables, KPI cards, and slicers.
-9. Visual Analysis: Organized visuals around business questions to make the report easier to interpret.
-
-🎛️ Interactive Features
-
-The report includes interactive slicers that allow users to explore the data by selected dimensions, including:
+Depending on the page and applicable dataset, these include:
 
 * Year
 * Month
@@ -175,63 +235,134 @@ The report includes interactive slicers that allow users to explore the data by 
 * Country
 * Channel
 * Distributor
-* Warehouse, where applicable
+* Warehouse
+* Supplier
+* SKU or product
 
-These controls help users investigate performance across different business segments.
+The slicers allow users to investigate performance across selected time periods and business dimensions.
 
-💡 Business Value
+Filter interactions should be interpreted according to the relationships and configuration of each visual in the Power BI model.
 
-This project demonstrates how data analysis can support pharmaceutical sales and supply chain decision-making by helping users:
+Data Modeling & Analytical Considerations
 
-* Identify high-performing products and customers.
-* Compare sales performance across business dimensions.
-* Monitor inventory distribution and value.
-* Explore the relationship between forecast demand and inventory levels.
-* Compare supplier lead times.
-* Navigate business performance through interactive dashboards.
+The project applies data modeling principles to organize the available tables for analytical reporting.
 
-The report is intended to support exploratory analysis and operational monitoring. Business decisions should also consider data quality, business rules, and the limitations of the underlying dataset.
+The modeling workflow includes:
 
-⚠️ Data & Interpretation Notes
+* Reviewing table structures and available keys.
+* Examining relationships between tables.
+* Configuring relationships needed for analysis.
+* Developing measures for relevant business KPIs.
+* Using filter context to support interactive reporting.
+* Validating aggregations and results against the source data.
 
-* The analysis is based on the fields and records available in the project datasets.
-* KPI values depend on the definitions, aggregation methods, and filter context used in the report.
-* Inventory levels and forecast demand are not necessarily directly comparable unless their units, time periods, and aggregation methods are aligned.
-* Supplier lead time is not, by itself, a complete measure of supplier performance.
-* Results should be interpreted in the context of the available data.
+Because the sales and inventory datasets are separate, their measures should not be combined into a single business calculation without a justified relationship and compatible definitions.
 
-🚀 Skills Demonstrated
+Business Value
 
-* SQL-based data exploration and validation
-* Data cleaning and preparation
-* Data modeling and table relationships
+The dashboards demonstrate how data analysis can support business questions related to pharmaceutical sales and supply chain operations.
+
+Potential applications include:
+
+* Identifying high-contributing products and customers.
+* Comparing sales across product classes, countries, and channels.
+* Monitoring sales trends over time.
+* Understanding inventory distribution across warehouses.
+* Comparing inventory levels with forecast demand.
+* Reviewing reorder-point information.
+* Investigating supplier lead-time differences.
+
+These are analytical use cases rather than claims of measured financial improvement. Specific recommendations should be based on validated findings from the underlying data.
+
+Data Limitations
+
+The following limitations should be considered when interpreting the report:
+
+* The project uses two separate datasets rather than a confirmed, unified company dataset.
+* The available fields determine which business questions can be answered.
+* KPI values depend on measure definitions, aggregation methods, and filter context.
+* Inventory levels and forecast demand should only be compared when their units and time periods are compatible.
+* Average lead time alone does not fully measure supplier performance.
+* Reorder points should be interpreted in the context of the underlying inventory methodology.
+* Sales and inventory measures should not be combined into unsupported business conclusions.
+* Results should be validated against the source data before being used to make operational decisions.
+
+Skills Demonstrated
+
+SQL & Data Analysis
+
+* Data exploration
+* Data profiling and validation
+* Analytical queries
+* Aggregation and filtering
+* Business-question-driven analysis
+
+Power BI
+
+* Data modeling
 * DAX measures and KPI development
+* Interactive dashboard development
+* Slicers and filter interactions
+* Matrix and hierarchy analysis
+* Comparative and trend visualizations
+
+Business Intelligence
+
 * Sales performance analysis
-* Inventory and supply chain analytics
-* Interactive dashboard design
-* Data visualization and business reporting
-* Translating business questions into analytical views
+* Product and customer analysis
+* Inventory analysis
+* Supply chain reporting
+* KPI interpretation
+* Dashboard storytelling
+* Business reporting and visualization
 
-📷 Project Screenshots
+Repository Structure
 
-Screenshots of the dashboard pages can be added here.
+The repository currently contains the project README.
 
-Suggested structure:
+Recommended structure for the completed portfolio project:
 
-* screenshots/executive-overview.png
-* screenshots/sales-analysis.png
-* screenshots/inventory-analysis.png
-* screenshots/product-customer-insights.png
+Pharmaceutical-Sales-Supply-Chain-Analytic/
+│
+├── README.md
+│
+├── screenshots/
+│   ├── executive-overview.png
+│   ├── sales-analysis.png
+│   ├── inventory-analysis.png
+│   └── product-customer-insights.png
+│
+├── sql/
+│   └── analytical-queries.sql
+│
+└── powerbi/
+    └── pharmaceutical-sales-supply-chain.pbix
 
-👤 Author
+The folders and filenames above are recommended. Add them only when the corresponding files are available and ready to share.
+
+How to Explore the Project
+
+1. Review the dashboard screenshots in the screenshots folder.
+2. Read the dashboard descriptions and business questions in this README.
+3. Review the SQL queries if they are included in the repository.
+4. Open the Power BI report if the .pbix file is available.
+5. Explore the slicers and visuals to investigate the available data.
+
+If the Power BI report uses local source-file paths, those paths may need to be updated before refreshing the data.
+
+Author
 
 Mahmoud Khamees
 
-Aspiring Data Analyst | SQL Server | Power BI | Data Analytics
+Data Analytics Portfolio Project
 
-* LinkedIn: [https://www.linkedin.com/in/mahmoud-khamees-6a3776362?utm_source=share_via&utm_content=profile&utm_medium=member_ios]
-* GitHub: [https://github.com/mahmoudkhamees-del]
+Focus Areas: SQL Server | Microsoft Power BI | DAX | Data Modeling | Business Intelligence
 
-⸻
+* GitHub: https://github.com/mahmoudkhamees-del
+* LinkedIn: https://www.linkedin.com/in/mahmoud-khamees-6a3776362/
 
-This project was developed as a practical data analytics portfolio project to demonstrate the application of SQL Server and Power BI to pharmaceutical sales and supply chain analysis.
+Disclaimer
+
+This project was developed for educational and portfolio purposes. Its findings and metrics are based on the available datasets and implemented calculations. They should not be interpreted as verified results for a specific pharmaceutical company.
+
+The analysis demonstrates the application of SQL Server and Power BI to sales and supply chain analytics.
